@@ -10,6 +10,6 @@ try:
     req.raise_for_status()
     # # content = brotli.decompress(req.content)
     # res = req.content.decode('utf-8')
-    print(req.content.decode())
+    print(req.content)
 except requests.RequestException as e:
     print(e)
