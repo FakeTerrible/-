@@ -13,9 +13,10 @@ try:
     req.raise_for_status()
     obj = json.loads(req.text)
     for i in obj['data']['list']:
-        print(i['title'])
-        print(i['tname'])
-        print(i['videos'])
-        print(i['short_link_v2'])
+        print('|--' + i['title'])
+        print('|---' + i['tname'])
+        print('|----' + str(i['videos']))
+        print('|-----' + i['short_link_v2'])
+        print()
 except requests.RequestException as e:
     print(e)
