@@ -245,7 +245,7 @@ cmap = {
     "gid58375": "相",
     "gid58435": "w",
     "gid58516": "H",
-    "gid58426": "口",
+    "gid58426": "可",
     "gid58679": "音",
     "gid58661": "觉",
     "gid58509": "女",
@@ -324,7 +324,7 @@ cmap = {
     "gid58402": "气",
     "gid58697": "W",
     "gid58628": "由",
-    "gid58526": "口",
+    "gid58526": "回",
     "gid58552": "告",
     "gid58562": "人",
     "gid58352": "场",
@@ -398,6 +398,7 @@ try:
             # print(itm, '--->', ord(itm), '----->: d ', d, 'word: ', word)
  
         print(''.join(words))
+        print('链接地址:https://fanqienovel.com/page/' + b['bookId'])
     # res = bytearray(b'')
     # i = 0
     # print(hex(58642))
