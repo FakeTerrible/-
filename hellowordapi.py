@@ -8,8 +8,9 @@ try:
     obj = json.loads(req.text)
     data = obj['data']
     for i in data:
-        print(i['title'])
-        print(i['summary'])
-        print('https://hellogithub.com/repository/' + i['item_id'])
+        print("|--------------------------------------------------")
+        print("|--" + i['title'])
+        print("|--" + i['summary'])
+        print("|--" + 'https://hellogithub.com/repository/' + i['item_id'])
 except requests.RequestException as e:
     print(e)
