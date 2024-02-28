@@ -11,7 +11,8 @@ try:
     obj = json.loads(req.text)
     subjects = obj['subjects']
     for i in subjects:
-        print(i['title'] + '    ' + 'https://im1907.top/?jx=' + i['title'])
+        print(i['title'])
+        # print(i['title'] + '    ' + 'https://im1907.top/?jx=' + i['title'])
 
 except requests.RequestException as e:
     print(e)

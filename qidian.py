@@ -12,7 +12,7 @@ if __name__ == '__main__':
         req = requests.get(base, headers=header)
         req.raise_for_status()
         soup = BeautifulSoup(req.text, 'html.parser')
-        # print(req.text)
+        print(req.text)
         ranks = soup.find_all('div', class_='rank-list')
         for rank in ranks:
             title = rank.find('h3')
