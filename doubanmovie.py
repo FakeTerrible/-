@@ -1,4 +1,5 @@
 import json
+import time
 
 from bs4 import BeautifulSoup
 from Req.Get import getbody
@@ -11,6 +12,8 @@ if __name__ == '__main__':
     obj = json.loads(getbody(base, headers))
     subjects = obj['subjects']
     for i in subjects:
+        time.sleep(1)
+        print("====================================================================================")
         print(i['title'])
         body = getbody(i['url'], headers)
         soup = BeautifulSoup(body, features='html.parser')

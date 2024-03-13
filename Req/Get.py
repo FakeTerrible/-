@@ -7,5 +7,5 @@ def getbody(url, headers):
         print("请求结果：" + str(req.status_code))
         return req.text
     except requests.RequestException as e:
-        print("error")
+        print(e)
         return e
