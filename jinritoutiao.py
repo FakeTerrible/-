@@ -13,8 +13,12 @@ try:
         title = info['title']
         area = info['area']
         year = info['year']
+        director = info['director']
+        summary = info['summary']
         print(title + ' ' + actors)
+        print(director)
         print(area + ' ' + year)
-
+        print(summary)
+        print('--------------------------------------------------------------------------------------------')
 except requests.RequestException as e:
     print(e)
