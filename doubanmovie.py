@@ -1,6 +1,6 @@
 import json
 import time
-
+import urllib.parse
 from bs4 import BeautifulSoup
 from Req.Get import getbody
 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     for i in subjects:
         time.sleep(1)
         print("====================================================================================")
-        print(i['title'])
+        print('电影名称： ' + i['title'] + '\t' + 'https://im1907.top/?jx=' + urllib.parse.quote(i['title']))
         body = getbody(i['url'], headers)
         soup = BeautifulSoup(body, features='html.parser')
         content = soup.find('div', id='link-report-intra').text.strip()
