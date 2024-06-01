@@ -1,6 +1,6 @@
 import json
-import requests
 from Req.Get import getbody
+import urllib.parse
 from bs4 import BeautifulSoup
 
 if __name__ == '__main__':
@@ -19,7 +19,7 @@ if __name__ == '__main__':
         print("|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|")
         print("|+" + i['title'])
         print("|+" + i['card_subtitle'])
-        print("|+" + "https://im1907.top/?jx=" + i['title'])
+        print("|+" + "https://im1907.top/?jx=" + urllib.parse.quote(i['title']))
         urlson = 'https://movie.douban.com/subject/' + i['id'] + '/'
         soup = BeautifulSoup(getbody(urlson, headers_1), features='html.parser')
         report = soup.find('div', id='link-report-intra')
